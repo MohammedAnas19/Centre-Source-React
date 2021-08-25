@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 function CheckBox({ name }) {
-  const [toggle, setToggle] = useState(true);
+  const [toggle, setToggle] = useState(false);
 
   return (
     <span
@@ -16,7 +16,7 @@ function CheckBox({ name }) {
         <span class="checkmarkFalse"></span>
       )}
       <input type="checkbox" checked={toggle}></input>
-      {name}
+      <p style={{ marginTop: "1px", marginLeft: 0 }}>{name}</p>
     </span>
   );
 }

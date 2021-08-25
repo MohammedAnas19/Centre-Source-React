@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import CheckBox from "./CheckBox";
+import DatePicker from "./DatePicker";
 
 function DateSelect() {
   const [toggle, setToggle] = useState(false);
@@ -28,6 +29,9 @@ function DateSelect() {
         </li>
         <li>
           <CheckBox name="07/01/2021" />
+        </li>
+        <li>
+          <DatePicker />
         </li>
       </ul>
     </div>

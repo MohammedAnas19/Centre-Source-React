@@ -38,6 +38,10 @@ export default function Main() {
           <Food name="Beef Salad Mozarella" url="./assets/Group 113.png" />
         </div>
       </div>
+      <button className="proceed-btn">Proceed</button>
+      <div className="contact-us">
+        <p>Feel Free to contact us for your customized meal</p>
+      </div>
     </div>
   );
 }

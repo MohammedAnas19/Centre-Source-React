@@ -4,7 +4,7 @@ function navbar() {
     <div className="navbar container">
       <div>
         <ul>
-          <li>HOME</li>
+          <li style={{ marginLeft: 0 }}>HOME</li>
           <li>ABOUT US</li>
           <li>DIET PLANS</li>
           <li className="btn" style={{ width: "164px", color: "white" }}>

@@ -125,13 +125,13 @@ margin-top: 14px
   display: flex;
 align-items: center;
 justify-content: center;
-margin-top: 13.02px;
+margin-top: 6px;
 }
 
 .checkbox {
   display: flex;
   position: relative;
-  font: normal normal normal 14px/19px Roboto;
+  /* font-size: 14px; */
   letter-spacing: 0.21px;
   cursor: pointer;
   -webkit-user-select: none;
@@ -145,21 +145,21 @@ margin-top: 13.02px;
   display: none;
 }
 .checkmarkFalse{
-  width: 20px;
+  width: 26px;
   height: 20px;
-  border:2px solid #44BB4C;
+  border:2px solid #8C8C8C;
   border-radius:2px;
   display: block;
-  margin-right: 13px;
+  margin-right: 3px;
 }
 .checkmarkTrue{
   background: url("./assets/verified.svg") 0% 0% no-repeat padding-box;
-  width: 24px;
+  width: 31px;
   height: 24px;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   display: block;
-  margin-right: 13px;
+  margin-right: 2px;
 }
 .food-container{
   margin-top:19px;
@@ -196,6 +196,7 @@ color: #474747;
 .imgContainer{
   width: 217px;
 height: 320px;
+position: relative;
 }
 .food-img{
   width: 217px;
@@ -204,3 +205,60 @@ border-radius: 20px;
 opacity: 1;
 }
 
+.ab-switch{
+  width: 165px;
+  height: 64px;
+  background: #44BB4C 0% 0% no-repeat padding-box;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top:6px;
+  padding-bottom:5px;
+  padding-left:10px;
+  padding-right:10px;
+  position:absolute;
+  top: 185px;
+  left: 16px;
+}
+.ab-switch span{
+  width: 78px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 53px;
+  cursor: pointer;
+}
+.ab-switch .active{
+  
+background: #FFFFFF 0% 0% no-repeat padding-box;
+border-radius: 15px;
+}
+
+.proceed-btn{
+  width: 223px;
+height: 40px;
+background: #27A12F 0% 0% no-repeat padding-box;
+border-radius: 25px;
+color: #FFFFFF;
+margin-top: 54px;
+margin-bottom: 54px;
+border: none !important;
+}
+.contact-us{
+  background: transparent url("./assets/Kerala-Food-Idiyappam-and-Egg-Curry1-1.png") 0% 0% no-repeat padding-box;
+  width: 1366px;
+  height: 301px;
+  background-size: cover;
+  opacity: 0.8;
+}
+
+.contact-us p{
+  font-size:25px;
+  color: #fff;
+  font-weight: bolder;
+  opacity: 1 !important;
+  margin-top:39px;
+  margin-bottom:29px;
+
+}
