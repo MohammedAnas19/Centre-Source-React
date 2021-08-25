@@ -14,6 +14,7 @@ function App() {
       lunch: "Beef Salad-Mozzarela",
       eveningMeal: "Asian Beef Salad",
       supper: "Beef Salad-Mozzarela",
+      availableOpt: [true, false, true, false],
     },
     {
       date: "26/8/2021",
@@ -21,13 +22,15 @@ function App() {
       lunch: "Asian Beef Salad",
       eveningMeal: "Beef Salad-Mozzarela",
       supper: "Asian Beef Salad",
+      availableOpt: [true, true, false, false],
     },
     {
-      date: "27/08/2021",
+      date: "27/8/2021",
       breakFast: "Asian Beef Salad",
       lunch: "Beef Salad-Mozzarela",
       eveningMeal: "Asian Beef Salad",
       supper: "Beef Salad-Mozzarela",
+      availableOpt: [false, false, true, true],
     },
     {
       date: "28/8/2021",
@@ -35,6 +38,7 @@ function App() {
       lunch: "Asian Beef Salad",
       eveningMeal: "Beef Salad-Mozzarela",
       supper: "Asian Beef Salad",
+      availableOpt: [false, true, false, false],
     },
     {
       date: "29/8/2021",
@@ -42,6 +46,7 @@ function App() {
       lunch: "Beef Salad-Mozzarela",
       eveningMeal: "Asian Beef Salad",
       supper: "Beef Salad-Mozzarela",
+      availableOpt: [false, true, false, true],
     },
     {
       date: "30/8/2021",
@@ -49,6 +54,7 @@ function App() {
       lunch: "Asian Beef Salad",
       eveningMeal: "Beef Salad-Mozzarela",
       supper: "Asian Beef Salad",
+      availableOpt: [true, true, true, false],
     },
     {
       date: "31/8/2021",
@@ -56,15 +62,23 @@ function App() {
       lunch: "Beef Salad-Mozzarela",
       eveningMeal: "Asian Beef Salad",
       supper: "Beef Salad-Mozzarela",
+      availableOpt: [false, false, false, true],
     },
   ]);
 
   const [mydate, setDate] = useState(new Date());
-
+  const [currentFood, setCurrentFood] = useState(dishes[0]);
+  // console.log("currrrrrrrrrrr", currentFood);
   return (
     <div className="App">
       <Navbar />
-      <Main dish={dishes} date={mydate} setDate={setDate} />
+      <Main
+        dishes={dishes}
+        date={mydate}
+        setDate={setDate}
+        currentFood={currentFood}
+        setCurrentFood={setCurrentFood}
+      />
       <div className="container contact-us">
         <p>Feel Free to contact us for your customized plan</p>
         <Form />

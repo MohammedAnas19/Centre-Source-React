@@ -14,6 +14,9 @@ function DateSelect(props) {
           return (
             <li>
               <CheckBox
+                currentFood={props.currentFood}
+                setCurrentFood={props.setCurrentFood}
+                dishes={props.dishes}
                 name={
                   new Date(
                     new Date(new Date(props.date)).setDate(
@@ -39,7 +42,11 @@ function DateSelect(props) {
           );
         })}
         <li>
-          <DatePicker date={props.date} setDate={props.setDate} />
+          <DatePicker
+            date={props.date}
+            setDate={props.setDate}
+            currentFood={props.currentFood}
+          />
         </li>
       </ul>
     </div>

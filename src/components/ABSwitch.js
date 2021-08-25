@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function ABSwitch() {
+function ABSwitch({ availableOpt }) {
   const [active, setActive] = useState(true);
   const toggleController = (opt) => {
     setActive(!active);
@@ -9,13 +9,13 @@ function ABSwitch() {
     <div className="ab-switch">
       <span
         onClick={() => toggleController()}
-        className={active ? "active" : " "}
+        className={availableOpt ? "ab-active" : " "}
       >
         A
       </span>
       <span
         onClick={() => toggleController()}
-        className={active ? " " : " active"}
+        className={availableOpt ? " " : " ab-active"}
       >
         B
       </span>

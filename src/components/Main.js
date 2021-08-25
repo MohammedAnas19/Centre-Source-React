@@ -2,7 +2,13 @@ import React from "react";
 import DateSelect from "./DateSelect";
 import Food from "./Food";
 
-export default function Main({ dishes, date, setDate }) {
+export default function Main({
+  dishes,
+  date,
+  setDate,
+  currentFood,
+  setCurrentFood,
+}) {
   return (
     <div
       className="container main"
@@ -20,22 +26,44 @@ export default function Main({ dishes, date, setDate }) {
         </button>
       </div>
       <div className="food-container">
-        <DateSelect date={date} setDate={setDate} />
+        <DateSelect
+          date={date}
+          setDate={setDate}
+          currentFood={currentFood}
+          setCurrentFood={setCurrentFood}
+          dishes={dishes}
+        />
         <div>
           <p>BreakFast</p>
-          <Food name="Asian Beef Salad" url="./assets/Group 113.png" />
+          <Food
+            availableOpt={currentFood.availableOpt[0]}
+            name={currentFood.breakFast}
+            url="./assets/Group 113.png"
+          />
         </div>
         <div>
           <p>Lunch</p>
-          <Food name="Beef Salad Mozarella" url="./assets/Group 113.png" />
+          <Food
+            availableOpt={currentFood.availableOpt[1]}
+            name={currentFood.lunch}
+            url="./assets/Group 113.png"
+          />
         </div>
         <div>
           <p style={{ width: "100%" }}>Evening Meal</p>
-          <Food name="Asian Beef Salad" url="./assets/Group 113.png" />
+          <Food
+            availableOpt={currentFood.availableOpt[2]}
+            name={currentFood.eveningMeal}
+            url="./assets/Group 113.png"
+          />
         </div>
         <div>
           <p>Supper</p>
-          <Food name="Beef Salad Mozarella" url="./assets/Group 113.png" />
+          <Food
+            availableOpt={currentFood.availableOpt[3]}
+            name={currentFood.supper}
+            url="./assets/Group 113.png"
+          />
         </div>
       </div>
       <button className="proceed-btn">Proceed</button>
