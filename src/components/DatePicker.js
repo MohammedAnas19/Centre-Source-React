@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { DatePicker } from "react-rainbow-components";
-function DatePicker1() {
+function DatePicker1({ date, setDate }) {
   const containerStyles = {
     width: "135px",
     height: "45px",
@@ -10,7 +10,13 @@ function DatePicker1() {
     marginTop: "23px",
   };
   const [state, setState] = useState({ date: new Date() });
-
+  const handleDate = (v) => {
+    // console.log(v);
+    setDate(v);
+    setState({ date: v });
+    // console.log(date);
+  };
+  // console.log("date pppp", date);
   return (
     <div
       className="rainbow-align-content_center rainbow-m-vertical_large rainbow-p-horizontal_small rainbow-m_auto"
@@ -20,10 +26,11 @@ function DatePicker1() {
         style={{
           color: "white",
           marginTop: "4px",
+          width: "100%",
         }}
       >
         Select <br />
-        custom dates{" "}
+        custom dates
       </p>
 
       <DatePicker
@@ -34,7 +41,7 @@ function DatePicker1() {
           opacity: 0,
           zIndex: "9999",
         }}
-        onChange={(value) => setState({ date: value })}
+        onChange={(value) => handleDate(value)}
       ></DatePicker>
     </div>
   );

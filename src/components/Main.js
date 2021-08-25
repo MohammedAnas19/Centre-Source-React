@@ -1,9 +1,8 @@
 import React from "react";
 import DateSelect from "./DateSelect";
 import Food from "./Food";
-import Form from "./Form";
 
-export default function Main() {
+export default function Main({ dishes, date, setDate }) {
   return (
     <div
       className="container main"
@@ -21,7 +20,7 @@ export default function Main() {
         </button>
       </div>
       <div className="food-container">
-        <DateSelect />
+        <DateSelect date={date} setDate={setDate} />
         <div>
           <p>BreakFast</p>
           <Food name="Asian Beef Salad" url="./assets/Group 113.png" />
@@ -31,7 +30,7 @@ export default function Main() {
           <Food name="Beef Salad Mozarella" url="./assets/Group 113.png" />
         </div>
         <div>
-          <p>Evening Meal</p>
+          <p style={{ width: "100%" }}>Evening Meal</p>
           <Food name="Asian Beef Salad" url="./assets/Group 113.png" />
         </div>
         <div>

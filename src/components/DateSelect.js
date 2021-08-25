@@ -2,36 +2,44 @@ import React, { useState } from "react";
 import CheckBox from "./CheckBox";
 import DatePicker from "./DatePicker";
 
-function DateSelect() {
+function DateSelect(props) {
   const [toggle, setToggle] = useState(false);
-
-  //   const checkToggle=()={
-  //     setToggle(!toggle);
-  //   }
+  const [dateSet, setDateSet] = useState([0, 1, 2, 3, 4, 5]);
+  console.log(props.date);
 
   return (
     <div className="DateSelect">
       <ul>
+        {dateSet.map((d) => {
+          return (
+            <li>
+              <CheckBox
+                name={
+                  new Date(
+                    new Date(new Date(props.date)).setDate(
+                      new Date(new Date(props.date)).getDate() + d
+                    )
+                  ).getDate() +
+                  "/" +
+                  (new Date(
+                    new Date(new Date(props.date)).setDate(
+                      new Date(new Date(props.date)).getDate() + d
+                    )
+                  ).getMonth() +
+                    1) +
+                  "/" +
+                  new Date(
+                    new Date(new Date(props.date)).setDate(
+                      new Date(new Date(props.date)).getDate() + d
+                    )
+                  ).getFullYear()
+                }
+              />
+            </li>
+          );
+        })}
         <li>
-          <CheckBox name="02/01/2021" />
-        </li>
-        <li>
-          <CheckBox name="03/01/2021" />
-        </li>
-        <li>
-          <CheckBox name="04/01/2021" />
-        </li>
-        <li>
-          <CheckBox name="05/01/2021" />
-        </li>
-        <li>
-          <CheckBox name="06/01/2021" />
-        </li>
-        <li>
-          <CheckBox name="07/01/2021" />
-        </li>
-        <li>
-          <DatePicker />
+          <DatePicker date={props.date} setDate={props.setDate} />
         </li>
       </ul>
     </div>

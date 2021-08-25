@@ -146,12 +146,12 @@ margin-top: 6px;
   display: none;
 }
 .checkmarkFalse{
-  width: 26px;
+  width: 20px;
   height: 20px;
-  border:2px solid #8C8C8C;
-  border-radius:2px;
+  border: 2px solid #8C8C8C;
+  border-radius: 2px;
   display: block;
-  margin-right: 3px;
+  margin-right: 8px;
 }
 .checkmarkTrue{
   background: url("./assets/verified.svg") 0% 0% no-repeat padding-box;
@@ -178,7 +178,7 @@ margin-top: 6px;
 
 .food-container p{
   margin: auto;
-  width: 100%;
+  width: 76px;
 height: 21px;
 text-align: center;
 font-size:16px;

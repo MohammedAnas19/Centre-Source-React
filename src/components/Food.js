@@ -8,7 +8,7 @@ function Food({ name, url }) {
         <img src={url} className="food-img" />
         <ABSwitch />
       </div>
-      <p>{name}</p>
+      <p style={{ width: "100%" }}>{name}</p>
     </div>
   );
 }
