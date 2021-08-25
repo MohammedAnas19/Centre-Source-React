@@ -57,7 +57,7 @@ box-shadow: 0px 3px 6px #0000000D;
 }
 .logo{
 text-align: center;
-flex:;
+margin-left:97.61px;
 }
 .logo img{
   width:56px;
@@ -73,7 +73,7 @@ flex:;
   justify-content: center;
 }
 .main-title{
-  font: normal normal bold 25px/33px Roboto;
+  font-size: 25px;
   letter-spacing: 0.38px;
 }
 .und{
@@ -83,7 +83,8 @@ background: transparent url("./assets/Group 160.svg") 0% 0% no-repeat padding-bo
 opacity: 1;
 }
 .subTitle{
-  font: normal normal medium 18px/15px Roboto;
+  font-size: 18px;
+color: #646464;
 letter-spacing: 0px;
 margin-top: 30px;
 }
@@ -255,10 +256,75 @@ border: none !important;
 
 .contact-us p{
   font-size:25px;
-  color: #fff;
+  color: #FFFFFF;
   font-weight: bolder;
   opacity: 1 !important;
   margin-top:39px;
   margin-bottom:29px;
 
+}
+
+form input{
+  width: 338px;
+height: 37px;
+background: #F2F2F2 0% 0% no-repeat padding-box;
+border: 1px solid #FFFFFF;
+border-radius: 1px;
+}
+form label{
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+form button{
+  position: absolute;
+  top: -18px;
+  right: -161px;
+  background: #27A12F;
+  border: none;
+  width: 136px;
+height: 182px;
+float: left;
+color: #fff;
+font-weight: bold;
+font-size: 16px;
+}
+
+
+
+
+footer{
+  width: 100%;
+height: 317px;
+background: transparent linear-gradient(180deg, #FBFBFB 0%, #FFFFFF 100%) 0% 0% no-repeat padding-box;
+opacity: 1;
+}
+
+footer > div > div > h6{
+  color: #27A12F;
+  font-size: 14px;
+  margin-bottom: 11px;
+}
+
+footer > div > div > div{
+  width: 113px;
+height: 113px;
+margin-right: 87.75px;
+}
+footer > div > div > ul li{
+  font-size: 14px;
+  color: #474747;
+  margin-bottom: 4px;
+}
+footer > div > div > ul li img:not(:last-child){
+  margin-right: 18.66px;
+}
+footer >div{
+  border-bottom: 1px solid #474747;
+  padding-bottom:45px;
+}
+footer > p{
+  font-size: 14px;
+  color: #676565;
+  text-align: center;
+  margin-top:35px;
 }

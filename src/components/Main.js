@@ -1,6 +1,7 @@
 import React from "react";
 import DateSelect from "./DateSelect";
 import Food from "./Food";
+import Form from "./Form";
 
 export default function Main() {
   return (
@@ -11,7 +12,7 @@ export default function Main() {
       <h3 className="main-title">Choose Your Dishes</h3>
       <div className="und"></div>
       <p className="subTitle">
-        As per your recommended caloriie,choose your dishes from below
+        As per your recomented calorie, choose your dishes from below
       </p>
       <div className="btn-container">
         <button className="mainButton-yl">
@@ -39,9 +40,6 @@ export default function Main() {
         </div>
       </div>
       <button className="proceed-btn">Proceed</button>
-      <div className="contact-us">
-        <p>Feel Free to contact us for your customized meal</p>
-      </div>
     </div>
   );
 }

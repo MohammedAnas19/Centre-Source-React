@@ -11,7 +11,9 @@ function navbar() {
             SELECT YOUR PLAN
           </li>
         </ul>
-        <div className="logo"></div>
+        <div className="logo">
+          <img src="./assets/logo.jpg" />
+        </div>
       </div>
       <div>
         <ul className="acc">
